@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ titulo }}</h2>
+
+<form method="POST">
+
+    <input type="text" name="titulo" placeholder="Título" required>
+
+    <input type="text" name="tipo" placeholder="Tipo (Filme, Série, Livro...)" required>
+
+    <input type="text" name="indicado_por" placeholder="Indicado por">
+
+    <button type="submit">
+        {% if item_selecionado %}
+            Atualizar
+        {% else %}
+            Cadastrar
+        {% endif %}
+    </button>
+
+</form>
+
+<hr>
+
+<ul>
+{% for item in itens %}
+    <li>
+        <strong>{{ item.titulo }}</strong> - {{ item.tipo }}
+        <br>
+        Indicado por: {{ item.indicado_por or '---' }}
+        <br>
+        <a href="{{ url_for('update', idItem=item.id_item) }}">Editar</a>
+        <a href="{{ url_for('delete', idItem=item.id_item) }}">Excluir</a>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

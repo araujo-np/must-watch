@@ -1,0 +1,127 @@
+/* Importando fontes sofisticadas */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+:root {
+    --primary: #d4a373;     /* Bege dourado elegante */
+    --secondary: #faedcd;   /* Creme suave */
+    --text: #4a4a4a;
+    --bg: #fefae0;          /* Off-white quente */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo horizontalmente */
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+/* Título com fonte Serifada Elegante */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--primary);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Container principal centralizado */
+main {
+    width: 100%;
+    max-width: 500px;
+    text-align: center; /* Centraliza textos e botões internos */
+}
+
+/* Formulário organizado */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    margin-bottom: 40px;
+}
+
+input {
+    width: 80%; /* Não ocupa a largura toda para dar elegância */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e9edc9;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; /* Texto digitado também centralizado */
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary);
+    background: #fffdfa;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 50px; /* Botão pílula */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    letter-spacing: 2px;
+    background-color: #bc8a5f;
+}
+
+/* Lista organizada e limpa */
+ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens da lista */
+}
+
+li {
+    list-style: none;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza conteúdo do item */
+    gap: 5px;
+}
+
+li strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+li span {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 300;
+}
+
+/* Link de exclusão delicado */
+a {
+    margin-top: 10px;
+    color: #ccadb2;
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    color: #a5a5a5;
+}
